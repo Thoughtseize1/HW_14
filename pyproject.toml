@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "syncedaddressbook"
+name = "HW_14"
 version = "0.1.0"
 description = ""
 authors = ["Nikita Sherstianykh <n.sherstianykh@gmail.com>"]
@@ -20,7 +20,12 @@ fastapi-mail = "^1.4.1"
 redis = "^5.0.0"
 python-dotenv = "^1.0.0"
 pydantic-settings = "^2.0.3"
+pytest = "^7.4.0"
+pytest-cov = "^4.1.0"
 
+
+[tool.poetry.group.test.dependencies]
+httpx = "^0.24.1"
 
 [build-system]
 requires = ["poetry-core"]

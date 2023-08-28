@@ -25,7 +25,7 @@ class ContactResponse(BaseModel):
     created_at: datetime
     updated_at: datetime
 
-    class Config:
+    class ConfigDict:
         from_attributes: True
 
 
@@ -37,7 +37,7 @@ class ContactSearchResponse(BaseModel):
     birthdate: date
     additional_data: Optional[str] = None
 
-    class Config:
+    class ConfigDict:
         from_attributes: True
 
 
@@ -67,7 +67,7 @@ class UserFromDb(BaseModel):
     created_at: datetime
     avatar: str
 
-    class Config:
+    class ConfigDict:
         """вказує, що модель UserDb використовується для представлення моделі ORM."""
         from_attributes = True
 
@@ -87,6 +87,7 @@ class TokenModel(BaseModel):
 
 class RequestEmail(BaseModel):
     email: EmailStr
+
 
 class EmailSchema(BaseModel):
     email: EmailStr

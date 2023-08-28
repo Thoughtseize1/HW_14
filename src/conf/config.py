@@ -13,11 +13,7 @@ class Settings(BaseSettings):
     mail_server: str = 'default'
     redis_host: str = 'localhost'
     redis_port: int = 6379
-    # model_config = SettingsConfigDict(env_file='../../.env', env_file_encoding='utf-8', extra='ignore')
-
-    class Config:
-        env_file = ".env"
-        env_file_encoding = "utf-8"
+    model_config = SettingsConfigDict(env_file='.env', env_file_encoding='utf-8', extra='ignore')
 
 
 settings = Settings()
